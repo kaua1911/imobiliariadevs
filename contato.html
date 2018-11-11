@@ -4,34 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Imobiliária</title>
 </head>
 <body>
-    <nav>
-        <div id="logo-nav">
-       <img src="img/logo.png" alt="">
-       <h1>Imobiliária Devs</h1>
+    <div id="navbar">
+        <div id="logo-nav">           
+            <img src="img/logo.png" alt="">
         </div>
-        <ul>
+        <ul class="">
             <a href="index.html">
-                <li >HOME</li>
+                <li class="active">HOME</li>
             </a>
-            <a href="">
-                <li>Imóveis</li>
+            <a href="imoveis.html">
+                <li>IMÓVEIS</li>
             </a>
-            <a href="">
-                <li class="active" >contato</li>
-            </a>
+            <a href="contato.html">
+                <li>CONTATO</li>
+            </a>            
         </ul>
-    </nav>
-    <!-- Inicio da section     -->
-    <section>
-
+    </div>   
+    
+    <section id="principal">
+        <div>
+            
+        </div>
+            
     </section>
-    <!-- fim da section -->
-    <!-- inicio footer -->
-    <footer>
 
+    <div class="formulario">
+        <form class="formulario" action="post">
+            <div class= "row">
+                <div class= "col-25">
+                    <label>NOME</label>
+                </div>
+                <div class="col-75">
+                    <input type="text">
+                </div>
+            </div>    
+            <div class= "row">
+                <div class= "col-25">
+                    <label>SOBRENOME</label>
+                </div> 
+                <div class="col-75">
+                    <input type="text">
+                </div>
+            </div>
+            <div class= "row">    
+                <div class= "col-25">
+                    <label>EMAIL</label> 
+                </div>
+                <div class="col-75">
+                    <input type="email">
+                </div>                                 
+            </div>
+            <div class="row">
+                <div class="col-25">    
+                    <label>TELEFONE</label> 
+                </div class="col-75">
+                <div>
+                    <input type="text">
+                </div> 
+            </div>
+            <div class= "row">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+  
+    <footer>
+        <div class="list">
+            <ul>
+                <li><a href=""><img class="social" src="img/icon-face.png" alt=""></a></li>
+                <li><a href=""><img class="social" src="img/icon-tt.png" alt=""></a></li>
+                <li><a href=""><img class="social" src="img/icon-insta.png" alt=""></a></li>
+            </ul>           
+        </div>
     </footer>
     <!-- fim do footer -->
 </body>

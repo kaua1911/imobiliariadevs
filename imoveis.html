@@ -4,25 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Imobiliária</title>
 </head>
 <body>
-    <nav>
-        <div id="logo-nav">
-       <img src="img/logo.png" alt="">
-       <h1>Imobiliária Devs</h1>
+    <div id="navbar">
+        <div id="logo-nav">           
+            <img src="img/logo.png" alt="">
         </div>
-        <ul>
+        <ul class="">
             <a href="index.html">
-                <li >HOME</li>
+                <li class="active">HOME</li>
             </a>
-            <a href="">
-                <li class="active">Imóveis</li>
+            <a href="imoveis.html">
+                <li>IMÓVEIS</li>
             </a>
-            <a href="">
-                <li>contato</li>
-            </a>
+            <a href="contato.html">
+                <li>CONTATO</li>
+            </a>            
         </ul>
-    </nav>
+    </div>
+
+    <!-- inicio da section -->
+    <section id="principal">
+        <div>
+            <img src="img/casa1.jpg" alt="">
+        </div>
+        <div>
+            <img src="img/casa2.jpg" alt="">
+        </div>        
+    </section>
+    <!-- fim da section -->
+
+    <!-- inicio do footer -->
+    <footer>
+        <div class="list">
+            <ul>
+                <li><a href=""><img class="social" src="img/icon-face.png" alt=""></a></li>
+                <li><a href=""><img class="social" src="img/icon-tt.png" alt=""></a></li>
+                <li><a href=""><img class="social" src="img/icon-insta.png" alt=""></a></li>
+            </ul>           
+        </div>
+    </footer>
+    <!-- fim do footer -->
 </body>
 </html>
