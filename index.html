@@ -12,7 +12,7 @@
         <div class="" >
             <ul class="" id="nav-list">                    
                 <li class="active">
-                    <a href="index.html">HOME</a>
+                    <a href="#section1">HOME</a>
                 </li>                   
                             
                 <li>
@@ -20,51 +20,49 @@
                 </li>                    
 
                 <li>
-                    <a href="contato.html">CONTATO</a>
+                    <a href="#contato">CONTATO</a>
                 </li>                                
             </ul>
         </div>
 
         <div id="logo-nav">           
             <img src="img/logo.png" alt="">
-        </div>
-
-         
-        <div class="main">
-                <a href="#go">
-                    <img id="main-button" src="img/menu (1).png">
-                </a>
-            </div>    
-    </div>
-
-    <div class="click-menu" id="go">
-        <nav class="menu">
-            <ul class="menu-list" >                    
-                <li class="active">
-                    <a href="index.html">HOME</a>
-                </li>                   
-                                    
-                <li>
-                    <a href="#imoveis">IMÓVEIS</a>
-                </li>                    
+        </div>         
         
-                <li>
-                        <a href="contato.html">CONTATO</a>
-                </li>
-            </ul>       
-            
-        </nav>
+        <button id="main-button" onclick="openMenu()">             
+             <img src="img/menu (1).png">                
+        </button>               
     </div>
+
+    
 
     <div class="container">
         
+        <div class="click-menu" id="go">        
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+            <a href="#section1"    onclick="closeMenu()">  HOME </a>
+            <a href="#imoveis"     onclick="closeMenu()">IMÓVEIS</a>
+            <a href="#contato"     onclick="closeMenu()">CONTATO</a>           
+        </div>
+        
         <!-- inicio da section -->
-        <section class="principal">
+        <section class="principal" id="section1">
                 <h1>DEVS IMOBILIARIA</h1>
         </section>
         <!-- fim da section -->
 
-        <div class="formulario">
+        <!-- imoveis -->
+        <div class="imoveis" id="imoveis">
+                <div>
+                    <img src="img/casa1.jpg">
+                </div>
+                <div>            
+                    <img src="img/casa2.jpg">
+                </div>           
+        </div>
+        <!-- fim imoveis -->
+
+        <div class="formulario" id="contato">
             <form class="" action="post">
                 <!-- <div class= "">
                     <div class= "">
@@ -104,33 +102,23 @@
                 <input type="text">
             </form>
         </div>
-
-        <div class="imoveis" id="imoveis">
-            <picture class="picture">
-                <img src="img/casa1.jpg">
-            </picture>
-
-            <picture class="picture">
-                <img src="img/casa2.jpg">
-            </picture>
-        </div>
-
-        <div>
-            
-        </div>
-
         <!-- inicio do footer -->
         <footer>
             <div class="list">
-                <ul>
-                    <li><a href=""><img class="social" src="img/fonte branca devs.png"></a></li>
-                    <li><a href=""><img class="social" src="img/icon-face.png" alt=""></a></li>
-                    <li><a href=""><img class="social" src="img/icon-tt.png" alt=""></a></li>
-                    <li><a href=""><img class="social" src="img/icon-insta.png" alt=""></a></li>
-                </ul>           
+                <a href="http://estartandodevs.com.br/index.html" target="_blank"><img id="logo-devs" src="img/fonte branca devs.png"></a>          
             </div>
         </footer>
         <!-- fim do footer -->
     </div>  
+
+    <script>
+        function openMenu() {
+            document.getElementById("go").style.width = "50%";
+        }
+        
+        function closeMenu() {
+            document.getElementById("go").style.width = "0";
+        }
+    </script>
 </body>
 </html>
