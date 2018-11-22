@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    padding: ;
+    padding: 0;
     margin: 0;
 }
 
@@ -8,9 +8,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 5px 0px;
-    background-color: rgb(31, 123, 135);
-    
+    padding: 0px 0px;
+    background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
 }
 
 .nav-bar {
@@ -29,20 +28,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #nav-list li {
     padding: 10px 30px;
 list-style: none;
 display: flex; 
 }
+#nav-list li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    transition: 0.9s;
+}
 
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#main-button{
-    height: 35px;
 }
 
 #logo-nav{
@@ -53,100 +56,189 @@ display: flex;
 
 #logo-nav img{
     height: 60px;
-}    
-.imodevs
+}
 
 .principal {
-    height: 1000px;
+    height: 100vh;
+}
+footer {            
+    display: flex;
+    justify-content: center;
+    background-color: rgb(169, 171, 174);
+    width: 100%;
+}
+.social{
+    width: 80px;
+}
+#logo-devs {
+    width: 150px;
+    padding:20px ;
+}
+.list{
+    display:flex;            
+    justify-content: center;
+    align-items: center;    
+}
+.list ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
 }
 
 
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+                
+        .click-menu{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 0%;
+            position: fixed;
+            z-index: 1;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            background-color: rgba(6, 6, 8, 100);
+            overflow-x: hidden;
+            transition: 1.0s;
+            padding-top: 70px;
+        }
+        .click-menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            font-size: 60px;
+        }
+        .click-menu a {
+            padding: 30px 0px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            transition: 0.9s;
+        }
+        .click-menu a:hover {
+            color: rgb(255,255,255);
+            /* transition: 3s; */
+        }
+        #main-button{
+            background-color: rgba(6, 6, 8, 100); 
+            border: none;           
+        }
+        #main-button img {
+            height: 35px;
+        }
+        
         .container, .principal{
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        .container {
+            background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
+            
+        }
 
         .principal {
-            height: 400px;
-        }
-
-        footer {            
+            height: 100vh;
             display: flex;
             justify-content: center;
-            width: 100%;
+            align-items: center;
         }
-
-        .list{
-            display:flex;
-            
-            justify-content: center;
-            width: 100%;
-            background-color: rgb(169, 171, 174);
-        }
-        .list ul {
+        .formulario{
             display: flex;
-            list-style: none;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        
+        .formulario form {
+            padding: 5px;
+        }
+        input {
+            width: 100%;
+        }
+        input[type=submit]{
+            border:none;
+            cursor:pointer;
+            padding: 10px 16px;
+            margin: 5px;
+            width: 50%;
+        }
+        .imoveis {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .imoveis img{
+            width: 50vh;
+            border-radius: 100px;
+        }        
         #logo-nav img {
             height: 50px;
         }
         #nav-list {
             display: none;
-        }
-        #imoveis {
-            display: none;
-        }
-        
-    }
-
-    @media(min-width: 601px) {
-        .principal {
-            height: 100px;
-        }
-    }
-
-    @media (max-width: 725px) {
-        .container, .principal{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .container {
-            /* margin-top: 500px; */
-        }
-       
-        }
-        .list{
-            list-style: none;
-        }
-        #logo-nav img {
-            height: 50px;
         }        
     }
 
-    @media (min-width:725px) {
-        #main-button {
-            display: none;
-        }
-    }
-
-    @media (min-width: 1318px) {
-        body {
+    
+    @media (min-width: 769px) {
+        /* body {
             background-repeat: no-repeat;
             background-size: 100%;
             background-image: url(../img/PicsArt_10-19-02.24.19.jpg);
             background-attachment: fixed;
+        } */
+        .nav-bar{
+            flex-direction: row-reverse;
+        }
+        body {
+            background-image: url(../img/fundo.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
         .container {
-            margin-top: 600px;
+            margin-top: 100vh;            
         }
         .principal {
-            height: 600px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imoveis {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* align-items: center;
+            justify-content: center; */
+            
+        }
+        .imoveis div{
+            display: flex;
+            padding: 5px;
+        }
+        .imoveis div img{
+            width: 50vh;
+            border-radius: 5px;
+            padding: 0px 5px;
+            /* width: 100%;             */
+        }        
+        .formulario{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        input {
+            width: 100%;
+        }
+        
+        .click-menu{
+            display: none;
         }
         #main-button {
             display: none;
@@ -157,4 +249,6 @@ display: flex;
         .nav-bar {
             justify-content: space-around;
         }
+        
+        
     }

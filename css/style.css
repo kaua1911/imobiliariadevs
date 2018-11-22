@@ -38,12 +38,8 @@ body {
     padding: 10px 30px;    
     display: flex;
     align-items:center;
-    /* background-color: yellow; */
 }
-#logo-nav img{
-    /* height: 50px;
-    padding: 10px; */
-}
+
 #logo-nav p{
     color: rgb(169, 171, 174)
 }
@@ -72,7 +68,6 @@ a{
 input[type=submit]{
     border:none;
     cursor:pointer;
-    border-radius:;
     padding: 10px 16px;
 }
 .list ul{ 
