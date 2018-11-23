@@ -64,6 +64,40 @@
 .principal {
     height: 100vh;
 }
+input[type=text], select, input[type=textarea] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 100vh;
+}
 footer {            
     display: flex;
     justify-content: center;
@@ -148,7 +182,7 @@ footer {
             justify-content: center;
             align-items: center;
         }
-        .formulario{
+        /* .formulario{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -156,8 +190,9 @@ footer {
         }
         .formulario form {
             padding: 5px;
-        }
-        input {
+        } */
+        
+        /* input {
             width: 100%;
         }
         input[type=submit]{
@@ -166,7 +201,7 @@ footer {
             padding: 10px 16px;
             margin: 5px;
             width: 50%;
-        }
+        } */
         .imoveis {
             display: flex;
             flex-direction: column;
@@ -241,7 +276,7 @@ footer {
             padding: 0px 5px;
             /* width: 100%;             */
         }        
-        .formulario{
+        /* .formulario{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -249,7 +284,7 @@ footer {
         }
         input {
             width: 100%;
-        }
+        } */
         
         .click-menu{
             display: none;
