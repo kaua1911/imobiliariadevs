@@ -2,6 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}body {
+    background-image: url(../img/fundo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
 }
 
 .container{
@@ -9,7 +16,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 0px 0px;
-    background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
+    background-color: rgba(31, 123, 135, 0.61);
 }
 
 .nav-bar {
@@ -32,14 +39,17 @@
 }
 #nav-list li {
     padding: 10px 30px;
-list-style: none;
-display: flex; 
+    list-style: none;
+    display: flex; 
 }
 #nav-list li a{
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     transition: 0.9s;
+}
+#nav-list li a:hover{
+    color: rgb(31, 123, 135) ;
 }
 
 .main{
@@ -49,9 +59,14 @@ display: flex;
 }
 
 #logo-nav{
-    padding: 0px;    
+    padding: 0px 20px;    
     display: flex;
     align-items:center;
+}
+#logo-nav p{
+ padding: 0px 10px;
+ color:  rgb(169, 171, 174);
+ font-size: 18px;
 }
 
 #logo-nav img{
@@ -60,6 +75,50 @@ display: flex;
 
 .principal {
     height: 100vh;
+}
+input[type=text], select, input[type=textarea] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 100vh;
+}
+.formulario form {
+    margin-top: 15px;
+}
+.formulario form div{
+    display: flex;
+    justify-content: center;
 }
 footer {            
     display: flex;
@@ -85,6 +144,29 @@ footer {
     flex-direction: row;
 }
 
+    @media (max-width: 400px) {
+
+        .imoveis {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .imoveis div{
+            display: flex;
+            flex-direction: column;
+            padding: 5px  5px;
+        }
+        .imoveis div img{
+            width: 10px;
+            border-radius: 10px;
+            padding: 5px 5px;
+            /* width: 100%;             */
+        } 
+        #imgbloco4 {
+            display: none;
+        }
+    }
 
     @media (max-width: 768px) {
                 
@@ -99,7 +181,7 @@ footer {
             height: 100vh;
             top: 0;
             right: 0;
-            background-color: rgba(6, 6, 8, 100);
+            background-color: rgba(6, 6, 8, 0.884);
             overflow-x: hidden;
             transition: 1.0s;
             padding-top: 70px;
@@ -135,8 +217,8 @@ footer {
             align-items: center;
         }
         .container {
-            background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
-            
+            background-image: linear-gradient(to top, rgba(31, 123, 135, 125), rgba(31, 123, 135, 0.015));
+            margin-top: 100vh;
         }
 
         .principal {
@@ -145,7 +227,7 @@ footer {
             justify-content: center;
             align-items: center;
         }
-        .formulario{
+        /* .formulario{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -153,8 +235,9 @@ footer {
         }
         .formulario form {
             padding: 5px;
-        }
-        input {
+        } */
+        
+        /* input {
             width: 100%;
         }
         input[type=submit]{
@@ -163,18 +246,29 @@ footer {
             padding: 10px 16px;
             margin: 5px;
             width: 50%;
-        }
+        } */
         .imoveis {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            height: 120vh;
         }
-        .imoveis img{
+
+        .imoveis div{
+            display: flex;
+            padding: 5px;
+        }
+
+        .imoveis div img{
+            width: 50vh;
+            border-radius: 100%;
+            padding: 5px 5px;
+            /* width: 100%;             */
+        } 
+        /* .imoveis img{
             width: 50vh;
             border-radius: 100px;
-        }        
+        }         */
         #logo-nav img {
             height: 50px;
         }
@@ -185,21 +279,11 @@ footer {
 
     
     @media (min-width: 769px) {
-        /* body {
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-image: url(../img/PicsArt_10-19-02.24.19.jpg);
-            background-attachment: fixed;
-        } */
+        
         .nav-bar{
             flex-direction: row-reverse;
         }
-        body {
-            background-image: url(../img/fundo.jpg);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
+       
         .container {
             margin-top: 100vh;            
         }
@@ -213,6 +297,7 @@ footer {
             display: flex;
             align-items: center;
             flex-direction: column;
+            height: 120vh;
             /* align-items: center;
             justify-content: center; */
             
@@ -223,11 +308,11 @@ footer {
         }
         .imoveis div img{
             width: 50vh;
-            border-radius: 5px;
+            border-radius: 100%;
             padding: 0px 5px;
             /* width: 100%;             */
         }        
-        .formulario{
+        /* .formulario{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -235,7 +320,7 @@ footer {
         }
         input {
             width: 100%;
-        }
+        } */
         
         .click-menu{
             display: none;
@@ -247,7 +332,7 @@ footer {
             display:none;
         }
         .nav-bar {
-            justify-content: space-around;
+            justify-content: space-between;
         }
         
         
