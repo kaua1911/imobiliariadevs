@@ -2,6 +2,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}body {
+    background-image: url(../img/fundo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
 }
 
 .container{
@@ -9,7 +16,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 0px 0px;
-    background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
+    background-color: rgba(31, 123, 135, 0.61);
 }
 
 .nav-bar {
@@ -56,6 +63,11 @@
     display: flex;
     align-items:center;
 }
+#logo-nav p{
+ padding: 0px 10px;
+ color:  rgb(169, 171, 174);
+ font-size: 18px;
+}
 
 #logo-nav img{
     height: 60px;
@@ -75,7 +87,7 @@ input[type=text], select, input[type=textarea] {
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 10%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -83,6 +95,8 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 input[type=submit]:hover {
@@ -91,12 +105,20 @@ input[type=submit]:hover {
 
 .formulario{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     height: 100vh;
+}
+.formulario form {
+    margin-top: 15px;
+}
+.formulario form div{
+    display: flex;
+    justify-content: center;
 }
 footer {            
     display: flex;
@@ -122,6 +144,29 @@ footer {
     flex-direction: row;
 }
 
+    @media (max-width: 400px) {
+
+        .imoveis {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .imoveis div{
+            display: flex;
+            flex-direction: column;
+            padding: 5px  5px;
+        }
+        .imoveis div img{
+            width: 10px;
+            border-radius: 10px;
+            padding: 5px 5px;
+            /* width: 100%;             */
+        } 
+        #imgbloco4 {
+            display: none;
+        }
+    }
 
     @media (max-width: 768px) {
                 
@@ -172,8 +217,8 @@ footer {
             align-items: center;
         }
         .container {
-            background-image: linear-gradient(to top, rgba(31, 123, 135, 0.61), rgb(31, 123, 135));
-            
+            background-image: linear-gradient(to top, rgba(31, 123, 135, 125), rgba(31, 123, 135, 0.015));
+            margin-top: 100vh;
         }
 
         .principal {
@@ -206,7 +251,7 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
+            height: 120vh;
         }
 
         .imoveis div{
@@ -216,8 +261,8 @@ footer {
 
         .imoveis div img{
             width: 50vh;
-            border-radius: 5px;
-            padding: 0px 5px;
+            border-radius: 100%;
+            padding: 5px 5px;
             /* width: 100%;             */
         } 
         /* .imoveis img{
@@ -234,21 +279,11 @@ footer {
 
     
     @media (min-width: 769px) {
-        /* body {
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-image: url(../img/PicsArt_10-19-02.24.19.jpg);
-            background-attachment: fixed;
-        } */
+        
         .nav-bar{
             flex-direction: row-reverse;
         }
-        body {
-            background-image: url(../img/fundo.jpg);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
+       
         .container {
             margin-top: 100vh;            
         }
@@ -262,6 +297,7 @@ footer {
             display: flex;
             align-items: center;
             flex-direction: column;
+            height: 120vh;
             /* align-items: center;
             justify-content: center; */
             
@@ -272,7 +308,7 @@ footer {
         }
         .imoveis div img{
             width: 50vh;
-            border-radius: 5px;
+            border-radius: 100%;
             padding: 0px 5px;
             /* width: 100%;             */
         }        
